@@ -7,6 +7,9 @@
             <div class="row">
                 <div class="col-lg-4">
                     <!-- code à venir (widgets) -->
+                    <?php
+                        dynamic_sidebar('footer-gauche'); // appelle la zone de widget d'id "footer-gauche" déclarée dans functions.php
+                    ?>
                 </div>
 
                 <div class="col-lg-4">
@@ -15,6 +18,14 @@
 
                 <div class="col-lg-4">
                     <!-- code à venir (menus-->
+                    <?php
+                        wp_nav_menu(array(  // cette fonction permet d'appeler le menu que nous avons déclaré dans functions.php
+                            'theme_location'  => 'secondary'  // 
+                        )); 
+
+                        // OU : wp_nav_menu('secondary');  // on appelle la zone de menu d'id "secondary" directement dans un string (sans array) quand il n'y a que l'id en argument
+                    ?>
+                   
                 </div>
 
 
